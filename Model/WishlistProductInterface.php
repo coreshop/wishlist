@@ -12,14 +12,11 @@
 
 declare(strict_types=1);
 
-namespace CoreShop\Component\Wishlist\Processor;
+namespace CoreShop\Component\Wishlist\Model;
 
-use CoreShop\Component\Wishlist\Model\WishlistItemInterface;
+use CoreShop\Component\Resource\Pimcore\Model\PimcoreModelInterface;
 
-interface WishlistItemProcessorInterface
+interface WishlistProductInterface extends PimcoreModelInterface
 {
-    public function processCartItem(
-        WishlistItemInterface $wishlistItem,
-        array $context
-    ): void;
+
 }
