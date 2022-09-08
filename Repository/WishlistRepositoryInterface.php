@@ -14,10 +14,10 @@ declare(strict_types=1);
 
 namespace CoreShop\Component\Wishlist\Repository;
 
+use CoreShop\Component\StorageList\Repository\PimcoreStorageListRepositoryInterface;
 use CoreShop\Component\Wishlist\Model\WishlistInterface;
-use CoreShop\Component\Resource\Repository\PimcoreRepositoryInterface;
 
-interface WishlistRepositoryInterface extends PimcoreRepositoryInterface
+interface WishlistRepositoryInterface extends PimcoreStorageListRepositoryInterface
 {
     public function findByToken(string $token): ?WishlistInterface;
 }
